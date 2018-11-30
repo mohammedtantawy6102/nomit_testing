@@ -1,0 +1,39 @@
+<form id="hello"></form>
+
+
+
+
+
+<script>
+var schemeJson = [
+    {name: "full_name", type: "text", required: true, label: "Full name" },
+    {name: "dob", type: "text", required: true, label: "Date of Birth" },
+    {name: "arrivedAt", type: "text", required: true, label: "Arrived in Australia" },
+    {name: "visa", type: "dropdown", required: true, label: "Visa Type", dropdown: [ "417 Working Holiday 1st yr", "417 Working Holiday 2nd yr", "417 Working Holiday 3rd yr", "462 Work and Holiday", "600 Student" ] },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+    {name: "skills", type: "tags", required: true, label: "Skills" },
+];
+
+var formHtml = '';
+for (var key in schemeJson) {
+    var field = schemeJson[key];
+
+    formHtml += `
+        <div>
+        <label>${field.label}</label>
+        <input type="${field.type}" name="${field.name}">
+        </div>
+    `;
+
+}
+document.getElementById('hello').innerHTML = formHtml;
+</script>
